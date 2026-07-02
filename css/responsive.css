@@ -21,3 +21,79 @@
     }
 
 }
+
+/* ===========================
+   Dashboard Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    left:-280px;
+
+}
+
+.sidebar.show{
+
+    left:0;
+
+}
+
+.main-content{
+
+    margin-left:0;
+
+    width:100%;
+
+}
+
+.menu-toggle{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.search-box{
+
+    width:220px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.top-navbar{
+
+    padding:15px;
+
+}
+
+.search-box{
+
+    display:none;
+
+}
+
+.profile-btn h6,
+.profile-btn small,
+.profile-btn i{
+
+    display:none;
+
+}
+
+.profile-btn{
+
+    padding:0;
+
+    background:none;
+
+}
+
+}

@@ -172,3 +172,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
+
+// forget password
+
+/* ======================================
+   Forgot Password
+====================================== */
+
+const forgotForm = document.getElementById("forgotForm");
+
+if (forgotForm) {
+
+    const email =
+        document.getElementById("resetEmail");
+
+    const error =
+        document.getElementById("resetEmailError");
+
+    const alertBox =
+        document.getElementById("successAlert");
+
+    forgotForm.addEventListener("submit", e => {
+
+        e.preventDefault();
+
+        error.textContent = "";
+
+        if (email.value.trim() === "") {
+
+            error.textContent =
+                "Email is required.";
+
+            return;
+
+        }
+
+        if (!validateEmail(email.value)) {
+
+            error.textContent =
+                "Enter a valid email.";
+
+            return;
+
+        }
+
+        alertBox.classList.remove("d-none");
+
+        forgotForm.reset();
+
+    });
+
+}
