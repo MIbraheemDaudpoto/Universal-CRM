@@ -1,0 +1,103 @@
+/* ==========================================
+   LEAD MODAL
+========================================== */
+
+.lead-modal{
+
+    border:none;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+
+.lead-modal .modal-header{
+
+    padding:30px;
+
+    border-bottom:1px solid #EEF2F7;
+
+}
+
+.lead-modal .modal-body{
+
+    padding:30px;
+
+}
+
+.lead-modal .modal-footer{
+
+    padding:25px 30px;
+
+    border-top:1px solid #EEF2F7;
+
+}
+
+.lead-modal .form-label{
+
+    font-weight:600;
+
+    color:#1E293B;
+
+    margin-bottom:8px;
+
+}
+
+.lead-modal .form-control,
+
+.lead-modal .form-select{
+
+    height:55px;
+
+    border-radius:14px;
+
+    border:1px solid #CBD5E1;
+
+}
+
+.lead-modal textarea{
+
+    resize:none;
+
+    height:auto !important;
+
+}
+
+.lead-modal .form-control:focus,
+
+.lead-modal .form-select:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:0 0 0 .2rem rgba(79,70,229,.15);
+
+}
+
+.save-lead-btn{
+
+    height:50px;
+
+    padding:0 30px;
+
+    border:none;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+    transition:.3s;
+
+}
+
+.save-lead-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 30px rgba(79,70,229,.25);
+
+}

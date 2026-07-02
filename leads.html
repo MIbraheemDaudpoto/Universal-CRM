@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leads | Universal CRM</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Mobile Overlay -->
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="dashboard-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <!-- Copy the Sidebar from dashboard.html here -->
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Universal CRM</h4>
+
+                    <small>Business Suite</small>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="menu-title">
+                    MAIN MENU
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <a href="/dashboard.html">
+
+                            <i class="fa-solid fa-users"></i>
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="customers.html">
+
+
+                            <i class="fa-solid fa-house"></i>
+                            <span>Customers</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="/leads.html" class="active">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <span>Leads</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <span>Employees</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <span>Tasks</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <span>Meetings</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <span>Calendar</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                            <span>Reports</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            <span>Notifications</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>Settings</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Bottom -->
+
+            <div class="sidebar-footer">
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+            <!-- ================= NAVBAR ================= -->
+
+            <!-- Copy the Navbar from dashboard.html here -->
+
+            <header class="top-navbar">
+
+                <!-- Left -->
+
+                <div class="navbar-left">
+
+                    <!-- Mobile Menu -->
+
+                    <button class="menu-toggle" id="menuToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" class="form-control" placeholder="Search customers, leads, reports...">
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="navbar-right">
+
+                    <!-- Notification -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="badge-count">5</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Messages -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <span class="badge-count">3</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Profile -->
+
+                    <div class="dropdown">
+
+                        <button class="profile-btn" data-bs-toggle="dropdown">
+
+                            <img src="https://ui-avatars.com/api/?name=Muhammad+Ibraheem&background=4F46E5&color=fff"
+                                alt="Profile">
+
+                            <div>
+
+                                <h6>Muhammad Ibraheem</h6>
+
+                                <small>Administrator</small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+
+                            <li>
+
+                                <a class="dropdown-item" href="customer-profile.html">
+
+                                    <i class="fa-regular fa-user me-2"></i>
+
+                                    Profile
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item" href="#">
+
+                                    <i class="fa-solid fa-gear me-2"></i>
+
+                                    Settings
+
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item text-danger" href="index.html">
+
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+
+                                    Logout
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <section class="page-content">
+
+                <!-- ================= BREADCRUMB ================= -->
+
+                <nav class="page-breadcrumb">
+
+                    <ol class="breadcrumb">
+
+                        <li class="breadcrumb-item">
+
+                            <a href="dashboard.html">Dashboard</a>
+
+                        </li>
+
+                        <li class="breadcrumb-item active">
+
+                            Leads
+
+                        </li>
+
+                    </ol>
+
+                </nav>
+
+                <!-- ================= PAGE HEADER ================= -->
+
+                <div class="page-header">
+
+                    <div>
+
+                        <h2>Lead Management</h2>
+
+                        <p>
+
+                            Track every lead from first contact to conversion.
+
+                        </p>
+
+                    </div>
+
+                    <button class="btn btn-primary add-btn" data-bs-toggle="modal" data-bs-target="#leadModal">
+
+                        <i class="fa-solid fa-plus me-2"></i>
+
+                        Add Lead
+
+                    </button>
+
+                </div>
+
+                <!-- ================= LEAD STATS ================= -->
+
+                <div class="row g-4 mb-4">
+
+                    <!-- Total -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-primary-subtle text-primary">
+
+                                    <i class="fa-solid fa-users"></i>
+
+                                </div>
+
+                                <span class="growth positive">
+
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                    +15%
+
+                                </span>
+
+                            </div>
+
+                            <h3>2,340</h3>
+
+                            <p>Total Leads</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Qualified -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-success-subtle text-success">
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+                                <span class="growth positive">
+
+                                    +10%
+
+                                </span>
+
+                            </div>
+
+                            <h3>1,280</h3>
+
+                            <p>Qualified</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Converted -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-warning-subtle text-warning">
+
+                                    <i class="fa-solid fa-handshake"></i>
+
+                                </div>
+
+                                <span class="growth positive">
+
+                                    +6%
+
+                                </span>
+
+                            </div>
+
+                            <h3>820</h3>
+
+                            <p>Converted</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Lost -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-danger-subtle text-danger">
+
+                                    <i class="fa-solid fa-user-xmark"></i>
+
+                                </div>
+
+                                <span class="growth negative">
+
+                                    -4%
+
+                                </span>
+
+                            </div>
+
+                            <h3>240</h3>
+
+                            <p>Lost Leads</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= TOOLBAR ================= -->
+
+                <div class="customer-toolbar">
+
+                    <div class="row g-3">
+
+                        <div class="col-lg-4">
+
+                            <div class="search-input">
+
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                                <input type="text" class="form-control" placeholder="Search leads...">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <select class="form-select">
+
+                                <option>Status</option>
+
+                                <option>New</option>
+
+                                <option>Qualified</option>
+
+                                <option>Converted</option>
+
+                                <option>Lost</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <select class="form-select">
+
+                                <option>Priority</option>
+
+                                <option>High</option>
+
+                                <option>Medium</option>
+
+                                <option>Low</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <button class="btn btn-light export-btn w-100">
+
+                                <i class="fa-solid fa-download me-2"></i>
+
+                                Export
+
+                            </button>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <button class="btn btn-outline-primary w-100">
+
+                                <i class="fa-solid fa-rotate-right me-2"></i>
+
+                                Refresh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- ================= LEADS TABLE ================= -->
+
+                <div class="table-card">
+
+                    <div class="table-responsive">
+
+                        <table class="table customer-table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Lead</th>
+
+                                    <th>Company</th>
+
+                                    <th>Source</th>
+
+                                    <th>Status</th>
+
+                                    <th>Priority</th>
+
+                                    <th>Assigned To</th>
+
+                                    <th class="text-center">Actions</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <!-- 1 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Muhammad+Ibraheem&background=4F46E5&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Muhammad Ibraheem</h6>
+
+                                                <small>ibraheem@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Microsoft</td>
+
+                                    <td><span class="badge bg-primary-subtle text-primary">Website</span></td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Qualified</span></td>
+
+                                    <td><span class="badge bg-danger">High</span></td>
+
+                                    <td>Ali Hassan</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn">
+
+                                            <i class="fa-solid fa-eye"></i>
+
+                                        </button>
+
+                                        <button class="btn-icon edit-btn">
+
+                                            <i class="fa-solid fa-pen"></i>
+
+                                        </button>
+
+                                        <button class="btn-icon delete-btn">
+
+                                            <i class="fa-solid fa-trash"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 2 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Ahmed+Khan&background=0EA5E9&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Ahmed Khan</h6>
+
+                                                <small>ahmed@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Google</td>
+
+                                    <td><span class="badge bg-info-subtle text-info">LinkedIn</span></td>
+
+                                    <td><span class="badge bg-warning-subtle text-warning">New</span></td>
+
+                                    <td><span class="badge bg-warning text-dark">Medium</span></td>
+
+                                    <td>Sarah Malik</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 3 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Fatima+Ali&background=9333EA&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Fatima Ali</h6>
+
+                                                <small>fatima@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Amazon</td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Referral</span></td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Converted</span></td>
+
+                                    <td><span class="badge bg-danger">High</span></td>
+
+                                    <td>Muhammad Bilal</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 4 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Usman+Sheikh&background=F97316&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Usman Sheikh</h6>
+
+                                                <small>usman@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Meta</td>
+
+                                    <td><span class="badge bg-danger-subtle text-danger">Facebook</span></td>
+
+                                    <td><span class="badge bg-secondary">Lost</span></td>
+
+                                    <td><span class="badge bg-success">Low</span></td>
+
+                                    <td>Hamza Ali</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 5 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Ayesha+Noor&background=10B981&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Ayesha Noor</h6>
+
+                                                <small>ayesha@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Netflix</td>
+
+                                    <td><span class="badge bg-dark">Email</span></td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Qualified</span></td>
+
+                                    <td><span class="badge bg-warning text-dark">Medium</span></td>
+
+                                    <td>Ali Hassan</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 6 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Zain+Ahmed&background=6366F1&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Zain Ahmed</h6>
+
+                                                <small>zain@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Adobe</td>
+
+                                    <td><span class="badge bg-info-subtle text-info">Instagram</span></td>
+
+                                    <td><span class="badge bg-warning-subtle text-warning">New</span></td>
+
+                                    <td><span class="badge bg-success">Low</span></td>
+
+                                    <td>Sarah Malik</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 7 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Hina+Shaikh&background=EC4899&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Hina Shaikh</h6>
+
+                                                <small>hina@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Oracle</td>
+
+                                    <td><span class="badge bg-primary-subtle text-primary">Website</span></td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Converted</span></td>
+
+                                    <td><span class="badge bg-danger">High</span></td>
+
+                                    <td>Muhammad Bilal</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 8 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Abdullah+Khan&background=06B6D4&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Abdullah Khan</h6>
+
+                                                <small>abdullah@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>IBM</td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Referral</span></td>
+
+                                    <td><span class="badge bg-success-subtle text-success">Qualified</span></td>
+
+                                    <td><span class="badge bg-warning text-dark">Medium</span></td>
+
+                                    <td>Hamza Ali</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 9 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Maryam+Iqbal&background=14B8A6&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Maryam Iqbal</h6>
+
+                                                <small>maryam@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Spotify</td>
+
+                                    <td><span class="badge bg-dark">Email</span></td>
+
+                                    <td><span class="badge bg-secondary">Lost</span></td>
+
+                                    <td><span class="badge bg-success">Low</span></td>
+
+                                    <td>Ali Hassan</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- 10 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="https://ui-avatars.com/api/?name=Owais+Ahmed&background=7C3AED&color=fff"
+                                                class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Owais Ahmed</h6>
+
+                                                <small>owais@gmail.com</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>Tesla</td>
+
+                                    <td><span class="badge bg-info-subtle text-info">LinkedIn</span></td>
+
+                                    <td><span class="badge bg-warning-subtle text-warning">New</span></td>
+
+                                    <td><span class="badge bg-danger">High</span></td>
+
+                                    <td>Sarah Malik</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <!-- ================= PAGINATION ================= -->
+
+                    <div class="pagination-wrapper">
+
+                        <div>
+
+                            <small class="text-muted">
+
+                                Showing 1–10 of 245 Leads
+
+                            </small>
+
+                        </div>
+
+                        <nav>
+
+                            <ul class="pagination mb-0">
+
+                                <li class="page-item disabled">
+
+                                    <a class="page-link">Previous</a>
+
+                                </li>
+
+                                <li class="page-item active">
+
+                                    <a class="page-link">1</a>
+
+                                </li>
+
+                                <li class="page-item">
+
+                                    <a class="page-link">2</a>
+
+                                </li>
+
+                                <li class="page-item">
+
+                                    <a class="page-link">3</a>
+
+                                </li>
+
+                                <li class="page-item">
+
+                                    <a class="page-link">Next</a>
+
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+    <!-- ==========================================
+     ADD LEAD MODAL
+========================================== -->
+
+    <div class="modal fade" id="leadModal" tabindex="-1">
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+            <div class="modal-content lead-modal">
+
+                <!-- Header -->
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <h4 class="modal-title">
+
+                            Add New Lead
+
+                        </h4>
+
+                        <p class="text-muted mb-0">
+
+                            Create a new sales lead for your CRM.
+
+                        </p>
+
+                    </div>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <!-- Body -->
+
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="row g-4">
+
+                            <!-- Name -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Full Name
+
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Muhammad Ibraheem">
+
+                            </div>
+
+                            <!-- Email -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Email
+
+                                </label>
+
+                                <input type="email" class="form-control" placeholder="example@gmail.com">
+
+                            </div>
+
+                            <!-- Phone -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Phone
+
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="+92 300 1234567">
+
+                            </div>
+
+                            <!-- Company -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Company
+
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Microsoft">
+
+                            </div>
+
+                            <!-- Source -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Lead Source
+
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>Website</option>
+
+                                    <option>Facebook</option>
+
+                                    <option>LinkedIn</option>
+
+                                    <option>Email Campaign</option>
+
+                                    <option>Referral</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Status -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Status
+
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>New</option>
+
+                                    <option>Qualified</option>
+
+                                    <option>Negotiation</option>
+
+                                    <option>Converted</option>
+
+                                    <option>Lost</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Priority -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Priority
+
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>High</option>
+
+                                    <option>Medium</option>
+
+                                    <option>Low</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Assigned To -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Assign Salesperson
+
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>Muhammad Ibraheem</option>
+
+                                    <option>Ali Hassan</option>
+
+                                    <option>Ahmed Khan</option>
+
+                                    <option>Sarah Malik</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Notes -->
+
+                            <div class="col-12">
+
+                                <label class="form-label">
+
+                                    Notes
+
+                                </label>
+
+                                <textarea class="form-control" rows="5"
+                                    placeholder="Additional information about this lead..."></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Footer -->
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-light" data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+                    <button class="btn save-lead-btn">
+
+                        <i class="fa-solid fa-floppy-disk me-2"></i>
+
+                        Save Lead
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/customers.js"></script>
+
+</body>
+
+</html>
