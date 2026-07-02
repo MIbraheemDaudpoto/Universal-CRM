@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers | Universal CRM</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Mobile Overlay -->
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="dashboard-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <!-- Copy the Sidebar from dashboard.html here -->
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Universal CRM</h4>
+
+                    <small>Business Suite</small>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="menu-title">
+                    MAIN MENU
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <a href="/dashboard.html">
+
+                            <i class="fa-solid fa-users"></i>
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#"class="active">
+
+
+                            <i class="fa-solid fa-house"></i>
+                            <span>Customers</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <span>Leads</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <span>Employees</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <span>Tasks</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <span>Meetings</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <span>Calendar</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                            <span>Reports</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            <span>Notifications</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>Settings</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Bottom -->
+
+            <div class="sidebar-footer">
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+            <!-- ================= NAVBAR ================= -->
+
+            <!-- Copy the Navbar from dashboard.html here -->
+
+            <header class="top-navbar">
+
+                <!-- Left -->
+
+                <div class="navbar-left">
+
+                    <!-- Mobile Menu -->
+
+                    <button class="menu-toggle" id="menuToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" class="form-control" placeholder="Search customers, leads, reports...">
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="navbar-right">
+
+                    <!-- Notification -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="badge-count">5</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Messages -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <span class="badge-count">3</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Profile -->
+
+                    <div class="dropdown">
+
+                        <button class="profile-btn" data-bs-toggle="dropdown">
+
+                            <img src="https://ui-avatars.com/api/?name=Muhammad+Ibraheem&background=4F46E5&color=fff"
+                                alt="Profile">
+
+                            <div>
+
+                                <h6>Muhammad Ibraheem</h6>
+
+                                <small>Administrator</small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+
+                            <li>
+
+                                <a class="dropdown-item" href="customer-profile.html">
+
+                                    <i class="fa-regular fa-user me-2"></i>
+
+                                    Profile
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item" href="#">
+
+                                    <i class="fa-solid fa-gear me-2"></i>
+
+                                    Settings
+
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item text-danger" href="index.html">
+
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+
+                                    Logout
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <section class="page-content">
+
+                <!-- ================= BREADCRUMB ================= -->
+
+                <nav class="page-breadcrumb">
+
+                    <ol class="breadcrumb">
+
+                        <li class="breadcrumb-item">
+
+                            <a href="dashboard.html">
+
+                                Dashboard
+
+                            </a>
+
+                        </li>
+
+                        <li class="breadcrumb-item active">
+
+                            Customers
+
+                        </li>
+
+                    </ol>
+
+                </nav>
+
+                <!-- ================= PAGE HEADER ================= -->
+
+                <div class="page-header">
+
+                    <div>
+
+                        <h2>
+
+                            Customers
+
+                        </h2>
+
+                        <p>
+
+                            Manage all your customers, monitor their activity and build stronger business relationships.
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <button class="btn btn-primary add-btn" data-bs-toggle="modal" data-bs-target="#customerModal">
+
+                            <i class="fa-solid fa-plus me-2"></i>
+
+                            Add Customer
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= CUSTOMER STATS ================= -->
+
+                <div class="row g-4 mb-4">
+
+                    <!-- Total Customers -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-primary-subtle text-primary">
+
+                                    <i class="fa-solid fa-users"></i>
+
+                                </div>
+
+                                <span class="growth positive">
+
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                    +12%
+
+                                </span>
+
+                            </div>
+
+                            <h3>3,240</h3>
+
+                            <p>Total Customers</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Active -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-success-subtle text-success">
+
+                                    <i class="fa-solid fa-user-check"></i>
+
+                                </div>
+
+                                <span class="growth positive">
+
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                    +8%
+
+                                </span>
+
+                            </div>
+
+                            <h3>2,940</h3>
+
+                            <p>Active Customers</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- New -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon bg-warning-subtle text-warning">
+
+                                    <i class="fa-solid fa-user-plus"></i>
+
+                                </div>
+
+                                <span class="growth positive">
+
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                    +25%
+
+                                </span>
+
+                            </div>
+
+                            <h3>128</h3>
+
+                            <p>New This Month</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Premium -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="customer-stat-card">
+
+                            <div class="stat-top">
+
+                                <div class="customer-icon premium-icon">
+
+                                    <i class="fa-solid fa-crown"></i>
+
+                                </div>
+
+                                <span class="growth negative">
+
+                                    <i class="fa-solid fa-arrow-trend-down"></i>
+
+                                    -2%
+
+                                </span>
+
+                            </div>
+
+                            <h3>640</h3>
+
+                            <p>Premium Members</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= CUSTOMER TOOLBAR ================= -->
+
+                <div class="customer-toolbar">
+
+                    <div class="row g-3 align-items-center">
+
+                        <!-- Search -->
+
+                        <div class="col-lg-4">
+
+                            <div class="search-input">
+
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                                <input type="text" class="form-control" placeholder="Search customers...">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Status -->
+
+                        <div class="col-lg-2">
+
+                            <select id="statusFilter" class="form-select">
+
+                                <option>Status</option>
+
+                                <option>Active</option>
+
+                                <option>Inactive</option>
+
+                                <option>Premium</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Company -->
+
+                        <div class="col-lg-2">
+
+                            <select id="statusFilter" class="form-select">
+
+                                <option>Company</option>
+
+                                <option>Microsoft</option>
+
+                                <option>Google</option>
+
+                                <option>Apple</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Export -->
+
+                        <div class="col-lg-2">
+
+                            <button class="btn btn-light export-btn w-100">
+
+                                <i class="fa-solid fa-download me-2"></i>
+
+                                Export
+
+                            </button>
+
+                        </div>
+
+                        <!-- Refresh -->
+
+                        <div class="col-lg-2">
+
+                            <button class="btn btn-outline-primary w-100">
+
+                                <i class="fa-solid fa-rotate-right me-2"></i>
+
+                                Refresh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= CUSTOMER TABLE ================= -->
+
+                <div class="table-card">
+
+                    <div class="table-responsive">
+
+                        <table class="table customer-table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Customer</th>
+
+                                    <th>Company</th>
+
+                                    <th>Phone</th>
+
+                                    <th>Status</th>
+
+                                    <th>Last Activity</th>
+
+                                    <th class="text-center">Actions</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="customerTableBody">
+                                <tr>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="images/customers/customer-1.jpg" class="customer-avatar" alt="">
+                                            <div>
+                                                <h6>Muhammad Ibraheem</h6>
+                                                <small>ibraheem@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Microsoft</td>
+                                    <td>+92 301 1234567</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td>10 mins ago</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-icon view-btn" title="View" data-bs-toggle="offcanvas"
+                                            data-bs-target="#customerDetails">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-icon edit-btn" title="Edit">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+                                        <button class="btn btn-icon delete-btn" title="Delete">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="images/customers/customer-2.jpg" class="customer-avatar" alt="">
+                                            <div>
+                                                <h6>Ali Hassan</h6>
+                                                <small>ali@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Google</td>
+                                    <td>+92 302 3344556</td>
+                                    <td><span class="badge bg-primary-subtle text-primary">Premium</span></td>
+                                    <td>1 hour ago</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-icon view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#customerDetails"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-icon delete-btn"><i
+                                                class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="images/customers/customer-3.jpg" class="customer-avatar" alt="">
+                                            <div>
+                                                <h6>Ahmed Khan</h6>
+                                                <small>ahmed@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Amazon</td>
+                                    <td>+92 303 7654321</td>
+                                    <td><span class="badge bg-secondary-subtle text-secondary">Inactive</span></td>
+                                    <td>Yesterday</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-icon view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#customerDetails"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-icon delete-btn"><i
+                                                class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="images/customers/customer-4.jpg" class="customer-avatar" alt="">
+                                            <div>
+                                                <h6>Sarah Malik</h6>
+                                                <small>sarah@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Meta</td>
+                                    <td>+92 304 8765432</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td>2 hours ago</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-icon view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#customerDetails"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-icon delete-btn"><i
+                                                class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="images/customers/customer-5.jpg" class="customer-avatar" alt="">
+                                            <div>
+                                                <h6>Ayesha Noor</h6>
+                                                <small>ayesha@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Netflix</td>
+                                    <td>+92 305 4567890</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td>Today</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-icon view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#customerDetails"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-icon delete-btn"><i
+                                                class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                    <!-- ================= PAGINATION ================= -->
+
+                    <div class="pagination-wrapper">
+
+                        <div>
+
+                            <small class="text-muted">
+
+                                Showing 1–10 of 250 customers
+
+                            </small>
+
+                        </div>
+
+                        <nav>
+
+                            <ul class="pagination mb-0">
+
+                                <li class="page-item disabled">
+
+                                    <a class="page-link">
+
+                                        Previous
+
+                                    </a>
+
+                                </li>
+
+                                <li class="page-item active">
+
+                                    <a class="page-link">
+
+                                        1
+
+                                    </a>
+
+                                </li>
+
+                                <li class="page-item">
+
+                                    <a class="page-link">
+
+                                        2
+
+                                    </a>
+
+                                </li>
+
+                                <li class="page-item">
+
+                                    <a class="page-link">
+
+                                        3
+
+                                    </a>
+
+                                </li>
+
+                                <li class="page-item">
+
+                                    <a class="page-link">
+
+                                        Next
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- ================= ADD CUSTOMER MODAL ================= -->
+
+    <div class="modal fade" id="customerModal" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content customer-modal">
+
+                <!-- Header -->
+
+                <div class="modal-header border-0 pb-0">
+
+                    <div>
+
+                        <h4 class="modal-title fw-bold">
+
+                            Add New Customer
+
+                        </h4>
+
+                        <p class="text-muted mb-0">
+
+                            Enter customer information below.
+
+                        </p>
+
+                    </div>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <!-- Body -->
+
+                <div class="modal-body pt-4">
+
+                    <form id="customerForm">
+
+                        <div class="row g-4">
+
+                            <!-- Full Name -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Full Name
+
+                                </label>
+
+                                <input type="text" id="customerName" class="form-control"
+                                    placeholder="Muhammad Ibraheem" required>
+
+                            </div>
+
+                            <!-- Email -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Email
+
+                                </label>
+
+                                <input type="email" id="customerEmail" class="form-control"
+                                    placeholder="example@gmail.com" required>
+
+                            </div>
+
+                            <!-- Phone -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Phone Number
+
+                                </label>
+
+                                <input type="tel" id="customerPhone" class="form-control" placeholder="+92 300 1234567"
+                                    required>
+                            </div>
+
+                            <!-- Company -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Company
+
+                                </label>
+
+                                <input type="text" id="customerCompany" class="form-control" placeholder="Google"
+                                    required>
+                            </div>
+
+                            <!-- Status -->
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Status
+
+                                </label>
+
+                                <select id="customerStatus" class="form-select" required>
+                                    <option>Active</option>
+
+                                    <option>Inactive</option>
+
+                                    <option>Premium</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Address -->
+
+                            <div class="col-12">
+
+                                <label class="form-label">
+
+                                    Address
+
+                                </label>
+
+                                <textarea id="customerAddress" class="form-control" rows="4"
+                                    placeholder="Customer Address" required></textarea>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Footer -->
+
+                <div class="modal-footer border-0">
+
+                    <button class="btn btn-light" data-bs-dismiss="modal">
+
+                        Cancel
+
+                        </butto<input type="text" id="searchCustomer" class="form-control"
+                            placeholder="Search by name, email or company...">
+
+                        <button type="submit" class="btn btn-primary save-btn"> <i
+                                class="fa-solid fa-floppy-disk me-2"></i>
+
+                            Save Customer
+
+                        </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CUSTOMER DETAILS OFFCANVAS ================= -->
+
+    <div class="offcanvas offcanvas-end customer-details" tabindex="-1" id="customerDetails">
+
+        <div class="offcanvas-header">
+
+            <h4>
+
+                Customer Details
+
+            </h4>
+
+            <button class="btn-close" data-bs-dismiss="offcanvas">
+            </button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <div class="customer-profile">
+
+                <img src="images/customers/customer-1.jpg" class="profile-avatar">
+
+                <h4>
+
+                    Muhammad Ibraheem
+
+                </h4>
+
+                <span class="badge bg-primary">
+
+                    Premium Customer
+
+                </span>
+
+            </div>
+
+            <hr>
+
+            <div class="detail-item">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                ibraheem@gmail.com
+
+            </div>
+
+            <div class="detail-item">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +92 301 1234567
+
+            </div>
+
+            <div class="detail-item">
+
+                <i class="fa-solid fa-building"></i>
+
+                Microsoft
+
+            </div>
+
+            <div class="detail-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Hyderabad, Pakistan
+
+            </div>
+
+            <hr>
+
+            <h6 class="mb-3">
+
+                Recent Activity
+
+            </h6>
+
+            <ul class="activity-list">
+
+                <li>
+
+                    Customer purchased Enterprise Plan
+
+                </li>
+
+                <li>
+
+                    Meeting completed yesterday
+
+                </li>
+
+                <li>
+
+                    Payment received
+
+                </li>
+
+                <li>
+
+                    Support ticket resolved
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/customers.js"></script>
+
+</body>
+
+</html>
