@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calenders | Universal CRM</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/customers.css">
+    <link rel="stylesheet" href="css/employees.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Mobile Overlay -->
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="dashboard-wrapper">
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Universal CRM</h4>
+
+                    <small>Business Suite</small>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="menu-title">
+                    MAIN MENU
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <a href="/dashboard.html">
+
+                            <i class="fa-solid fa-users"></i>
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="customers.html">
+
+
+                            <i class="fa-solid fa-house"></i>
+                            <span>Customers</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="leads.html">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <span>Leads</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="employees.html">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <span>Employees</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="tasks.html">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <span>Tasks</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <span>Meetings</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="calender.html">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <span>Calendar</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="reports.html">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                            <span>Reports</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="notifications.html" class="active">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            <span>Notifications</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="settings.html">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>Settings</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Bottom -->
+
+            <div class="sidebar-footer">
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+            <!-- ================= NAVBAR ================= -->
+
+            <!-- Copy the Navbar from dashboard.html here -->
+
+            <header class="top-navbar">
+
+                <!-- Left -->
+
+                <div class="navbar-left">
+
+                    <!-- Mobile Menu -->
+
+                    <button class="menu-toggle" id="menuToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" class="form-control" placeholder="Search customers, leads, reports...">
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="navbar-right">
+
+                    <!-- Notification -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="badge-count">5</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Messages -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <span class="badge-count">3</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Profile -->
+
+                    <div class="dropdown">
+
+                        <button class="profile-btn" data-bs-toggle="dropdown">
+
+                            <img src="https://ui-avatars.com/api/?name=Muhammad+Ibraheem&background=4F46E5&color=fff"
+                                alt="Profile">
+
+                            <div>
+
+                                <h6>Muhammad Ibraheem</h6>
+
+                                <small>Administrator</small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+
+                            <li>
+
+                                <a class="dropdown-item" href="customer-profile.html">
+
+                                    <i class="fa-regular fa-user me-2"></i>
+
+                                    Profile
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item" href="#">
+
+                                    <i class="fa-solid fa-gear me-2"></i>
+
+                                    Settings
+
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item text-danger" href="index.html">
+
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+
+                                    Logout
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <section class="page-content">
+
+
+                <div class="page-header">
+                    <div class="page-header">
+
+                        <h2>Calendar</h2>
+
+                    </div>
+
+                    <div class="profile-card">
+
+                        <div class="card-body-custom">
+
+                            <h4>Upcoming Events</h4>
+
+                            <ul class="activity-list">
+
+                                <li>Team Meeting - Monday</li>
+
+                                <li>Client Presentation - Tuesday</li>
+
+                                <li>Sales Review - Wednesday</li>
+
+                                <li>Project Deadline - Friday</li>
+
+                                <li>Monthly Report Submission</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+          
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/employees.js"></script>
+
+</body>
+
+</html>
