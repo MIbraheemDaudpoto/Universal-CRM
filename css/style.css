@@ -1,0 +1,32 @@
+(/* Animation utilities */)
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+@keyframes bounceSmall { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes spin360 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Animation utility classes */
+.anim { animation-duration: 420ms; animation-fill-mode: both; }
+.duration-short { animation-duration: 240ms; }
+.duration-medium { animation-duration: 420ms; }
+.duration-long { animation-duration: 900ms; }
+.fade-in { animation-name: fadeIn; }
+.fade-in-up { animation-name: fadeInUp; }
+.slide-in-left { animation-name: slideInLeft; }
+.bounce { animation-name: bounceSmall; animation-duration: 900ms; }
+.spin { animation-name: spin360; animation-duration: 1.2s; animation-iteration-count: infinite; }
+
+/* Stagger delays */
+.delay-1 { animation-delay: 60ms; }
+.delay-2 { animation-delay: 140ms; }
+.delay-3 { animation-delay: 220ms; }
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.anim, * { animation: none !important; transition: none !important; }
+}
+
+/* Example helper: apply on page load */
+.appear { opacity: 0; }
+.appear.is-visible { opacity: 1; transform: none; }
+
