@@ -1,0 +1,29 @@
+@import url("customers.css");
+
+.table-card{
+
+margin-top:30px;
+
+}
+
+.customer-stat-card{
+
+height:100%;
+
+}
+
+.customer-stat-card h3{
+
+font-size:32px;
+
+font-weight:700;
+
+}
+
+.customer-table td,
+
+.customer-table th{
+
+padding:18px;
+
+}

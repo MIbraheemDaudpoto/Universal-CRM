@@ -1,0 +1,139 @@
+/* =====================================
+   EMPLOYEES PAGE
+===================================== */
+
+@import url("customers.css");
+
+/* Employee specific customizations */
+
+.employee-avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.department-badge{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.department-dev{
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+}
+
+.department-hr{
+
+    background:#ECFDF5;
+
+    color:#16A34A;
+
+}
+
+.department-sales{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.department-finance{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+}
+
+.department-marketing{
+
+    background:#FCE7F3;
+
+    color:#DB2777;
+
+}
+
+.department-support{
+
+    background:#E0F2FE;
+
+    color:#0284C7;
+
+}
+
+.department-design{
+
+    background:#F3E8FF;
+
+    color:#7C3AED;
+
+}
+
+.department-admin{
+
+    background:#F1F5F9;
+
+    color:#475569;
+
+}
+
+.employee-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.employee-table tr{
+
+    transition:.3s;
+
+}
+
+.employee-table tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+.employee-modal .form-control,
+
+.employee-modal .form-select{
+
+    height:52px;
+
+    border-radius:14px;
+
+}
+
+.employee-modal textarea{
+
+    resize:none;
+
+}
+
+.employee-modal .form-control:focus,
+
+.employee-modal .form-select:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:0 0 0 .2rem rgba(79,70,229,.15);
+
+}
