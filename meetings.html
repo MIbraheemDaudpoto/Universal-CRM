@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meetings | Universal CRM</title>
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        /* Meeting Stats Grid Styling */
+        .meeting-stat-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .meeting-stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header element wrapper inside the card */
+        .stat-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Icon Container Setup */  
+        .meeting-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        /* Typography styling matching the source */
+        .meeting-stat-card h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.25rem;
+        }
+
+        .meeting-stat-card p {
+            font-size: 0.875rem;
+            color: #718096;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        /* Utility Contextual Color Variables (If not already provided by Bootstrap) */
+        .bg-primary-subtle {
+            background-color: #e0f2fe !important;
+        }
+
+        .text-primary {
+            color: #0284c7 !important;
+        }
+
+        .bg-success-subtle {
+            background-color: #dcfce7 !important;
+        }
+
+        .text-success {
+            color: #16a34a !important;
+        }
+
+        .bg-warning-subtle {
+            background-color: #fef3c7 !important;
+        }
+
+        .text-warning {
+            color: #d97706 !important;
+        }
+
+        .bg-info-subtle {
+            background-color: #e0f7fa !important;
+        }
+
+        .text-info {
+            color: #00acc1 !important;
+        }
+
+        .meeting-table{
+    table-layout:auto;
+    width:100%;
+}
+
+.meeting-table td,
+.meeting-table th{
+    vertical-align:middle;
+    white-space:normal;
+}
+.meeting-table td:last-child{
+    white-space:nowrap;
+}
+
+.btn-icon{
+    width:38px;
+    height:38px;
+    margin:0 2px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Mobile Overlay -->
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="dashboard-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <!-- Copy the Sidebar from dashboard.html here -->
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Universal CRM</h4>
+
+                    <small>Business Suite</small>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="menu-title">
+                    MAIN MENU
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <a href="/dashboard.html">
+
+                            <i class="fa-solid fa-users"></i>
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="customers.html">
+
+
+                            <i class="fa-solid fa-house"></i>
+                            <span>Customers</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="leads.html">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <span>Leads</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="employees.html">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <span>Employees</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="tasks.html">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <span>Tasks</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="meetings.html" class="active">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <span>Meetings</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="calenders.html">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <span>Calendar</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="reports.html">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                            <span>Reports</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="notifications.html">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            <span>Notifications</span>
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="settings.html">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>Settings</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Bottom -->
+
+            <div class="sidebar-footer">
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+            <!-- ================= NAVBAR ================= -->
+
+            <!-- Copy the Navbar from dashboard.html here -->
+
+            <header class="top-navbar">
+
+                <!-- Left -->
+
+                <div class="navbar-left">
+
+                    <!-- Mobile Menu -->
+
+                    <button class="menu-toggle" id="menuToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" class="form-control" placeholder="Search customers, leads, reports...">
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="navbar-right">
+
+                    <!-- Notification -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="badge-count">5</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Messages -->
+
+                    <div class="notification">
+
+                        <button class="icon-btn">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <span class="badge-count">3</span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Profile -->
+
+                    <div class="dropdown">
+
+                        <button class="profile-btn" data-bs-toggle="dropdown">
+
+                            <img src="https://ui-avatars.com/api/?name=Muhammad+Ibraheem&background=4F46E5&color=fff"
+                                alt="Profile">
+
+                            <div>
+
+                                <h6>Muhammad Ibraheem</h6>
+
+                                <small>Administrator</small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+
+                            <li>
+
+                                <a class="dropdown-item" href="customer-profile.html">
+
+                                    <i class="fa-regular fa-user me-2"></i>
+
+                                    Profile
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item" href="#">
+
+                                    <i class="fa-solid fa-gear me-2"></i>
+
+                                    Settings
+
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item text-danger" href="index.html">
+
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+
+                                    Logout
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <section class="page-content">
+
+                <!-- ================= BREADCRUMB ================= -->
+
+                <nav class="page-breadcrumb">
+
+                    <ol class="breadcrumb">
+
+                        <li class="breadcrumb-item">
+
+                            <a href="dashboard.html">
+
+                                Dashboard
+
+                            </a>
+
+                        </li>
+
+                        <li class="breadcrumb-item active">
+
+                            Meetings
+
+                        </li>
+
+                    </ol>
+
+                </nav>
+
+                <!-- ================= PAGE HEADER ================= -->
+
+                <div class="page-header">
+
+                    <div>
+
+                        <h2>Meetings</h2>
+
+                        <p>
+                            Manage client meetings, schedules, video conferences and upcoming appointments.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <button class="btn btn-primary add-btn" data-bs-toggle="modal" data-bs-target="#customerModal">
+
+                            <i class="fa-solid fa-calendar-plus me-2"></i>
+
+                            Schedule Meeting
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= CUSTOMER STATS ================= -->
+
+                <div class="row g-4 mb-4">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="meeting-stat-card">
+                            <div class="stat-top">
+                                <div class="meeting-icon bg-primary-subtle text-primary">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                            </div>
+                            <h3>186</h3>
+                            <p>Total Meetings</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="meeting-stat-card">
+                            <div class="stat-top">
+                                <div class="meeting-icon bg-success-subtle text-success">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                </div>
+                            </div>
+                            <h3>24</h3>
+                            <p>Today's Meetings</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="meeting-stat-card">
+                            <div class="stat-top">
+                                <div class="meeting-icon bg-warning-subtle text-warning">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                            </div>
+                            <h3>58</h3>
+                            <p>Upcoming</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="meeting-stat-card">
+                            <div class="stat-top">
+                                <div class="meeting-icon bg-info-subtle text-info">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                            <h3>104</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= MEETINGS TABLE ================= -->
+
+                <div class="table-card mb-4">
+
+                    <div class="table-responsive">
+
+                        <table class="table meeting-table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Meeting</th>
+                                    <th>Client</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Mode</th>
+                                    <th>Status</th>
+                                    <th>Organizer</th>
+                                    <th class="text-center">Actions</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <strong>Project Discussion</strong>
+                                        <br>
+                                        <small class="text-muted">CRM Development</small>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="images/customers/customer-1.jpg" class="customer-avatar">
+
+                                            <div>
+
+                                                <h6>Muhammad Ibraheem</h6>
+
+                                                <small>Microsoft</small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>25 July 2026</td>
+
+                                    <td>10:00 AM</td>
+
+                                    <td>
+
+                                        <span class="badge bg-primary-subtle text-primary">
+
+                                            Zoom
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-success-subtle text-success">
+
+                                            Scheduled
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>Ali Hassan</td>
+
+                                    <td class="text-center">
+
+                                        <button class="btn-icon view-btn">
+
+                                            <i class="fa-solid fa-eye"></i>
+
+                                        </button>
+
+                                        <button class="btn-icon edit-btn">
+
+                                            <i class="fa-solid fa-pen"></i>
+
+                                        </button>
+
+                                        <button class="btn-icon delete-btn">
+
+                                            <i class="fa-solid fa-trash"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td><strong>Sales Presentation</strong><br><small class="text-muted">New
+                                            Proposal</small></td>
+                                    <td>Ahmed Khan</td>
+                                    <td>26 July 2026</td>
+                                    <td>12:30 PM</td>
+                                    <td><span class="badge bg-info-subtle text-info">Google Meet</span></td>
+                                    <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                                    <td>Sarah Malik</td>
+                                    <td class="text-center">
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td><strong>Requirement Gathering</strong><br><small class="text-muted">Website
+                                            Project</small></td>
+                                    <td>Usman Ali</td>
+                                    <td>27 July 2026</td>
+                                    <td>09:00 AM</td>
+                                    <td><span class="badge bg-secondary-subtle text-secondary">Office</span></td>
+                                    <td><span class="badge bg-success-subtle text-success">Confirmed</span></td>
+                                    <td>Bilal Ahmed</td>
+                                    <td class="text-center">
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td><strong>Contract Meeting</strong><br><small class="text-muted">Agreement</small>
+                                    </td>
+                                    <td>Fatima Noor</td>
+                                    <td>28 July 2026</td>
+                                    <td>03:00 PM</td>
+                                    <td><span class="badge bg-primary-subtle text-primary">Zoom</span></td>
+                                    <td><span class="badge bg-danger-subtle text-danger">Cancelled</span></td>
+                                    <td>Muhammad Ali</td>
+                                    <td class="text-center">
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td><strong>Monthly Review</strong><br><small class="text-muted">Performance</small>
+                                    </td>
+                                    <td>Hamza Khan</td>
+                                    <td>29 July 2026</td>
+                                    <td>04:00 PM</td>
+                                    <td><span class="badge bg-info-subtle text-info">Teams</span></td>
+                                    <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                    <td>Ali Hassan</td>
+                                    <td class="text-center">
+                                        <button class="btn-icon view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn-icon edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pagination-wrapper mt-4">
+
+                    <small class="text-muted">
+
+                        Showing 1–5 of 148 meetings
+
+                    </small>
+
+                    <nav>
+
+                        <ul class="pagination mb-0">
+
+                            <li class="page-item disabled">
+
+                                <a class="page-link">Previous</a>
+
+                            </li>
+
+                            <li class="page-item active">
+
+                                <a class="page-link">1</a>
+
+                            </li>
+
+                            <li class="page-item">
+
+                                <a class="page-link">2</a>
+
+                            </li>
+
+                            <li class="page-item">
+
+                                <a class="page-link">3</a>
+
+                            </li>
+
+                            <li class="page-item">
+
+                                <a class="page-link">Next</a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/customers.js"></script>
+
+</body>
+
+</html>
